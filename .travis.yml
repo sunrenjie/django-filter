@@ -1,9 +1,13 @@
-sudo: false
+sudo: true
 
 language: python
 python: "3.5"
 
 cache: pip
+
+# Python 3.6 is not installed by default so...
+before_install:
+  - sudo tar xjf python-3.6.tar.bz2 --directory /
 
 install:
   - pip install coverage detox
