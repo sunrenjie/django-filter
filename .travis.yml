@@ -2,12 +2,15 @@ dist: trusty
 sudo: false
 
 language: python
-python: "3.5"
+python: "2.7"
 
 cache: pip
 
 # Python 3.6 is not installed by default so...
 before_install:
+  - pyenv install 3.3.6
+  - pyenv install 3.4.6
+  - pyenv install 3.5.2
   - pyenv install 3.6.0a3
   - pyenv versions
   - which python2.7
