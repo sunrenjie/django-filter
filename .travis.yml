@@ -9,6 +9,13 @@ cache: pip
 before_install:
   - curl https://s3.amazonaws.com/travis-python-archives/binaries/ubuntu/12.04/x86_64/python-3.6.tar.bz2 -o python-3.6.tar.bz2
   - sudo tar xjf python-3.6.tar.bz2 --directory /
+  - which python2.7
+  - which python3.3
+  - which python3.4
+  - which python3.5
+  - which python3.6
+  - which python
+  - ls home/travis/virtualenv/python3.6
 
 install:
   - pip install coverage detox
